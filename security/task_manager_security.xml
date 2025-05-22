@@ -1,0 +1,6 @@
+<odoo>
+  <record id="task_manager.group_task_user" model="res.groups">
+    <field name="name">Task Manager User</field>
+    <field name="category_id" ref="base.module_category_tools"/>
+  </record>
+</odoo>

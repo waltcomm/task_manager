@@ -1,0 +1,11 @@
+<odoo>
+  <record id="task_manager.ir_cron_task_expire_notify" model="ir.cron">
+    <field name="name">Task Expire Notification</field>
+    <field name="model_id" ref="task_manager.model_task_manager"/>
+    <field name="state">code</field>
+    <field name="code">model.cron_notify_expiring_tasks()</field>
+    <field name="interval_type">days</field>
+    <field name="interval_number">1</field>
+    <field name="active">True</field>
+  </record>
+</odoo>

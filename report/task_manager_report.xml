@@ -1,0 +1,53 @@
+<odoo>
+
+  <template id="report_task_manager_document">
+    <t t-call="web.external_layout">
+      <div class="page">
+        <h2 class="text-center o_mb_large">Task Report</h2>
+        <table class="table table-sm table-striped table-bordered mb0">
+          <thead class="thead-light">
+            <tr>
+              <th style="width:20%; padding:4px; font-weight:600;">Title</th>
+              <th style="width:30%; padding:4px; font-weight:600;">Description</th>
+              <th style="width:15%; padding:4px; font-weight:600;">Assigned To</th>
+              <th style="width:15%; padding:4px; font-weight:600;">Due Date</th>
+              <th style="width:10%; padding:4px; font-weight:600;">Status</th>
+              <th style="width:10%; padding:4px; font-weight:600;">Days Left</th>
+            </tr>
+          </thead>
+          <tbody>
+            <t t-foreach="docs" t-as="o">
+              <tr>
+                <td style="padding:4px;"><t t-esc="o.name"/></td>
+                <td style="padding:4px;"><t t-esc="o.description or '-'"/></td>
+                <td style="padding:4px;"><t t-esc="o.assigned_to.name or '-'"/></td>
+                <td style="padding:4px;"><t t-esc="o.due_date and o.due_date.strftime('%Y-%m-%d %H:%M') or '-'"/></td>
+                <td style="padding:4px;"><t t-esc="o.status or '-'"/></td>
+                <td style="padding:4px; text-align:center;"><t t-esc="o.days_left"/></td>
+              </tr>
+            </t>
+          </tbody>
+        </table>
+      </div>
+    </t>
+  </template>
+  
+  <record id="task_manager.action_report_task_manager" model="ir.actions.report">
+    <field name="report_name">task_manager.report_task_manager_document</field>
+    <field name="report_type">qweb-pdf</field>
+    <field name="model">task.manager</field>
+    <field name="name">Task Report</field>
+    <field name="print_report_name">'Task_' + object.name</field>
+  </record>
+
+  <report
+    id="action_report_task_manager"
+    model="task.manager"
+    string="Task Report" 
+    report_type="qweb-pdf"
+    name="task_manager.report_task_manager_document"
+    file="task_manager.report_task_manager_document"
+    print_report_name="'Task_' + object.name"
+  />
+
+</odoo>

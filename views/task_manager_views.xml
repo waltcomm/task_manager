@@ -1,0 +1,57 @@
+<odoo>
+  <record id="task_manager.view_task_manager_tree" model="ir.ui.view">
+    <field name="name">task.manager.tree</field>
+    <field name="model">task.manager</field>
+    <field name="arch" type="xml">
+      <tree string="Tasks">
+        <field name="name"/>
+        <field name="assigned_to"/>
+        <field name="due_date"/>
+        <field name="priority"/>
+        <field name="status"/>
+        <field name="days_left"/>
+      </tree>
+    </field>
+  </record>
+
+  <record id="task_manager.view_task_manager_form" model="ir.ui.view">
+    <field name="name">task.manager.form</field>
+    <field name="model">task.manager</field>
+    <field name="arch" type="xml">
+      <form string="Task">
+        <header>
+         <button
+           name="task_manager.action_report_task_manager"
+           type="action"
+           string="Print Report"
+           class="btn btn-primary"
+         />
+        </header>
+        <sheet>
+          <group>
+            <field name="name"/>
+            <field name="description"/>
+            <field name="assigned_to"/>
+            <field name="due_date"/>
+            <field name="priority"/>
+            <field name="status"/>
+            <field name="days_left" readonly="1"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="task_manager.action_task_manager" model="ir.actions.act_window">
+    <field name="name">Tasks</field>
+    <field name="res_model">task.manager</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+  <menuitem id="task_manager.menu_task_manager_root" name="Tasks" sequence="10"/>
+  <menuitem id="task_manager.menu_task_manager"
+            name="My Tasks"
+            parent="task_manager.menu_task_manager_root"
+            action="task_manager.action_task_manager"
+            sequence="10"/>
+</odoo>
