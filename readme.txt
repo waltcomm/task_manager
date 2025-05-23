@@ -1,4 +1,4 @@
-# Odoo Task Manager Module
+ï»¿# Odoo Task Manager Module
 
 A simple, extensible Task Management module for Odoo 17, with automated reminders and printable reports.
 
@@ -15,10 +15,10 @@ Features
   - Status (New -> In Progress -> Completed)
   - Days Left (computed calendar days to due date)
 - Automated Reminders:  
-  - Cron job runs daily and emails users when a task’s due date is within the next 3 days.
+  - Cron job runs daily and emails users when a taskâ€™s due date is within the next 3 days.
   - Uses a customizable Mail Template.
 - Printable QWeb Report:  
-  - “Print Report” button on the Task form.
+  - â€œPrint Reportâ€ button on the Task form.
   - Outputs a styled table of selected tasks (title, description, assignee, due date, status, days left).
 - Access Control:  
   - New group Task Manager User.
@@ -56,4 +56,4 @@ Select this menu, and the Tasks module interface will open.
 
 The Tasks window displays the full list of tasks.
 In the My Tasks window, you can click the New button to create a new task.
-To edit a task, click on it, and you’ll be able to press the Print Report button.
+To edit a task, click on it, and youâ€™ll be able to press the Print Report button.
