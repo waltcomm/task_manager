@@ -18,7 +18,7 @@ Features
   - Cron job runs daily and emails users when a task’s due date is within the next 3 days.
   - Uses a customizable Mail Template.
 - Printable QWeb Report:  
-  - “Print Report” button on the Task form.
+  - "Print Report" button on the Task form.
   - Outputs a styled table of selected tasks (title, description, assignee, due date, status, days left).
 - Access Control:  
   - New group Task Manager User.
