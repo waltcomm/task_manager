@@ -19,14 +19,6 @@
     <field name="model">task.manager</field>
     <field name="arch" type="xml">
       <form string="Task">
-        <header>
-         <button
-           name="task_manager.action_report_task_manager"
-           type="action"
-           string="Print Report"
-           class="btn btn-primary"
-         />
-        </header>
         <sheet>
           <group>
             <field name="name"/>
@@ -54,4 +46,11 @@
             parent="task_manager.menu_task_manager_root"
             action="task_manager.action_task_manager"
             sequence="10"/>
+  <menuitem
+    id="task_manager.menu_report_all_tasks"
+    name="Tasks Report"
+    parent="task_manager.menu_task_manager_root"
+    action="task_manager.action_report_task_manager"
+    sequence="20"/>
+
 </odoo>

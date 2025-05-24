@@ -18,7 +18,7 @@ Features
   - Cron job runs daily and emails users when a task’s due date is within the next 3 days.
   - Uses a customizable Mail Template.
 - Printable QWeb Report:  
-  - "Print Report" button on the Task form.
+  - "Tasks Report" menu.
   - Outputs a styled table of selected tasks (title, description, assignee, due date, status, days left).
 - Access Control:  
   - New group Task Manager User.
@@ -56,4 +56,5 @@ Select this menu, and the Tasks module interface will open.
 
 The Tasks window displays the full list of tasks.
 In the My Tasks window, you can click the New button to create a new task.
-To edit a task, click on it, and you’ll be able to press the Print Report button.
+To edit a task, click on it.
+To print Tasks Report click "Tasks Report" menu item.

@@ -1,6 +1,6 @@
 {
     "name": "Task Manager",
-    "version": "1.0",
+    "version": "1.1",
     "author": "Nikolajs Valters",
     "category": "Services",
     "summary": "Manage simple tasks",

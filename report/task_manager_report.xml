@@ -1,9 +1,9 @@
 <odoo>
 
   <template id="report_task_manager_document">
-    <t t-call="web.external_layout">
+    <t t-call="web.html_container">
       <div class="page">
-        <h2 class="text-center o_mb_large">Task Report</h2>
+        <h2 class="text-center o_mb_large">Tasks Report</h2>
         <table class="table table-sm table-striped table-bordered mb0">
           <thead class="thead-light">
             <tr>
@@ -31,19 +31,19 @@
       </div>
     </t>
   </template>
-  
+
   <record id="task_manager.action_report_task_manager" model="ir.actions.report">
     <field name="report_name">task_manager.report_task_manager_document</field>
     <field name="report_type">qweb-pdf</field>
     <field name="model">task.manager</field>
-    <field name="name">Task Report</field>
+    <field name="name">Tasks Report</field>
     <field name="print_report_name">'Task_' + object.name</field>
   </record>
 
   <report
     id="action_report_task_manager"
     model="task.manager"
-    string="Task Report" 
+    string="Tasks Report" 
     report_type="qweb-pdf"
     name="task_manager.report_task_manager_document"
     file="task_manager.report_task_manager_document"
